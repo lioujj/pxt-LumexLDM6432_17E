@@ -1,0 +1,15 @@
+{
+    "name": "LumexLDM6432_17E",
+    "version": "0.0.1",
+    "description": "這是專為micro:bit提供的LumexLDM 64*32韌體17.E以上之特有積木(This is an extension for the Lumex 64*32 LDM display screen(firmware 17.E).)",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "_locales/zh/LumexLDM6432_17E-strings.json"
+    ],
+    "public": true
+}
