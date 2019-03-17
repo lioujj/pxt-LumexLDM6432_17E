@@ -24,67 +24,13 @@ namespace LumexLDM6432_17E {
         type4 = 16
     }
 
-    export enum colorCode {
-        //% block="black"
-        color0 = 0,
-        //% block="white"
-        color111 = 111,
-        //% block="red"
-        color96 = 96,
-        //% block="orange"
-        color100 = 100,
-        //% block="yellow"
-        color108 = 108,
-        //% block="green"
-        color4 = 4,
-        //% block="blue"
-        color3 = 3,
-        //% block="indigo"
-        color66 = 66,
-        //% block="purple"
-        color99 = 99,
-        //% block="dark red"
-        color32 = 32,
-        //% block="pink"
-        color103 = 103,
-        //% block="earth yellow"
-        color104 = 104,
-        //% block="lime"
-        color12 = 12
-    }
 
-    function convertNumToHexStr(myNum: number, digits: number): string {
-        let tempDiv = 0
-        let tempMod = 0
-        let myStr = ""
-        tempDiv = myNum
-        while (tempDiv > 0) {
-            tempMod = tempDiv % 16
-            if (tempMod > 9) {
-                myStr = String.fromCharCode(tempMod - 10 + 97) + myStr
-            } else {
-                myStr = tempMod + myStr
-            }
-            tempDiv = Math.idiv(tempDiv, 16)
-        }
-        while (myStr.length != digits) {
-            myStr = "0" + myStr
-        }
-        return myStr
-    }
-
-    //% blockId="display firmware Revision"
-    //% weight=99 blockGap=2
+    //% blockId="LDM_displayFirmware"  block="display firmware Revision"
+    //% weight=100 blockGap=2
     export function LDM_displayFirmware(): void {
         serial.writeString("AT20=()")
         serial.readUntil("E")
         basic.pause(3)
-    }
-
-    //% blockId="LDM_getColor" block="color code %myColor"
-    //% weight=95 blockGap=2
-    export function LDM_getColor(myColor: colorCode): number {
-        return myColor
     }
 
 
@@ -100,14 +46,6 @@ namespace LumexLDM6432_17E {
     //% weight=59 blockGap=2 color.min=0 color.max=111 x.min=0 x.max=63 y.min=0 y.max=31
     export function LDM_setXYcolor(color: number, x: number, y: number): void {
         serial.writeString("ATee=(" + x + "," + y + "," + color + ")")
-        serial.readUntil("E")
-        basic.pause(3)
-    }
-
-    //% blockId="LDM_ATcommand" block="execute AT command: %atCommand"
-    //% weight=35 blockGap=10
-    export function LDM_ATcommand(atCommand: string): void {
-        serial.writeString(atCommand)
         serial.readUntil("E")
         basic.pause(3)
     }
