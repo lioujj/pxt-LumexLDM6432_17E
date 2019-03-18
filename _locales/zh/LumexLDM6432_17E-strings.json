@@ -1,7 +1,7 @@
 {
     "LumexLDM6432_17E|block": "LDM64*32_17E",
-    "LumexLDM6432_17E.showNow.yes|block":"是",
-    "LumexLDM6432_17E.showNow.no|block":"否",
+    "LumexLDM6432_17E.yesOrNo.yes|block":"是",
+    "LumexLDM6432_17E.yesOrNo.no|block":"否",
     "LumexLDM6432_17E.LDM_displayFirmware|block":"在面板上顯示韌體版本",
     "LumexLDM6432_17E.LDM_changeColor|block":"將面板上的顏色，顏色編碼為 %color1| 的顏色換為 %color2", 
     "LumexLDM6432_17E.LDM_setXYcolor|block":"將顏色編碼為 %color|的顏色，設定到 X座標: %x| Y座標: %y",
