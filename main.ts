@@ -58,7 +58,7 @@ namespace LumexLDM6432_17E {
         basic.pause(3)
     }
 
-    //% blockId="LDM_colorEffect" block="set the color effect: %colorEffect"
+    //% blockId="LDM_colorEffect" block="set the color effect(1~9): %colorEffect"
     //% weight=85 blockGap=2 colorEffect.min=1 colorEffect.max=9
     export function LDM_colorEffect(colorEffect: number): void {
         if (colorEffect>0 && colorEffect<10)
