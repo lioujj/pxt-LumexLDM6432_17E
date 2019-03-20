@@ -42,6 +42,14 @@ namespace LumexLDM6432_17E {
         basic.pause(3)
     }
 
+    //% blockId="LDM_changeColorArea" block="swap displayed color in the area:|x for the top left corner:%x|y for the top left corner:%y|width:%width|height:%height|from color %color1| to color %color2"
+    //% weight=94 blockGap=2 color1.min=0 color1.max=111 color2.min=0 color2.max=111 x.min=0 x.max=63 y.min=0 y.max=31 width.min=1 width.max=64 height.min=1 height.max=32
+    export function LDM_changeColorArea(x: number, y: number, width:number, height:number, color1:number, color2:number): void {
+        serial.writeString("ATcf=("+x+","+y+","+width+","+height+"," + color1 + "," + color2 + ")")
+        serial.readUntil("E")
+        basic.pause(3)
+    }
+
     //% blockId="LDM_setXYcolor" block="set the color code %color| to X: %x| Y: %y"
     //% weight=90 blockGap=2 color.min=0 color.max=111 x.min=0 x.max=63 y.min=0 y.max=31
     export function LDM_setXYcolor(color: number, x: number, y: number): void {
