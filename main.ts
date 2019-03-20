@@ -50,10 +50,20 @@ namespace LumexLDM6432_17E {
         basic.pause(3)
     }
 
+
     //% blockId="LDM_setXYcolor" block="set the color code %color| to X: %x| Y: %y"
     //% weight=90 blockGap=2 color.min=0 color.max=111 x.min=0 x.max=63 y.min=0 y.max=31
     export function LDM_setXYcolor(color: number, x: number, y: number): void {
         serial.writeString("ATee=(" + x + "," + y + "," + color + ")")
+        serial.readUntil("E")
+        basic.pause(3)
+    }
+
+
+    //% blockId="LDM_changeToOneColor" block="change color of all pixels except the black color pixels to color code %color"
+    //% weight=89 blockGap=2 color.min=0 color.max=111
+    export function LDM_changeToOneColor(color: number): void {
+        serial.writeString("ATc0=(" +color + ")")
         serial.readUntil("E")
         basic.pause(3)
     }
