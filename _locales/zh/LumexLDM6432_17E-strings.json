@@ -4,6 +4,7 @@
     "LumexLDM6432_17E.yesOrNo.no|block":"否",
     "LumexLDM6432_17E.LDM_displayFirmware|block":"在面板上顯示韌體版本",
     "LumexLDM6432_17E.LDM_changeColor|block":"將面板上的顏色，顏色編碼為 %color1| 的顏色換為 %color2", 
+    "LumexLDM6432_17E.LDM_changeColorArea|block":"變更區域範圍內的顏色:|範圍左上角X座標: %x|範圍左上角Y座標: %y|範圍寬度:%width|範圍高度:%height|要被置換掉的顏色編碼: %color1|置換後的顏色編碼: %color2",
     "LumexLDM6432_17E.LDM_setXYcolor|block":"將顏色編碼為 %color|的顏色，設定到 X座標: %x| Y座標: %y",
     "LumexLDM6432_17E.LDM_colorEffect|block":"執行顏色特效，特效編碼：%colorEffect",
     "LumexLDM6432_17E.LDM_setPatternOverlay|block":"設定圖案是否為覆蓋(是：覆蓋；否：黑色透明): %myAns",
