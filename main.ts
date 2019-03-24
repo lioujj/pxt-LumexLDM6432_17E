@@ -23,7 +23,17 @@ namespace LumexLDM6432_17E {
         //% block="16*16"
         type4 = 16
     }
-
+    
+    export enum moveDirection {
+        //% block="upward"        
+        upward=32,
+        //% block="downward" 
+        downward=33,
+        //% block="leftward" 
+        leftward=34,
+        //% block="rightward" 
+        rightward=35
+    }
 
     //% blockId="LDM_displayFirmware"  block="display firmware Revision"
     //% weight=100 blockGap=2
@@ -117,8 +127,16 @@ namespace LumexLDM6432_17E {
         basic.pause(3)
     }
 
+    //% blockId="LDM_movePattern" block="move user pattern 1 pixel %myDir|pattern type:%myPattern|Pattern ID: %myID"
+    //% weight=60 blockGap=2 myID.min=0 myID.max=24
+    export function LDM_movePattern(myDir :moveDirection,myPattern: usrPatternType, myID: number): void {
+        serial.writeString("AT"+myDir+"=(" +myPattern + "," + myPattern + "," + myID + ")")
+        serial.readUntil("E")
+        basic.pause(3)
+    }
+
     //% blockId="LDM_showAll" block="Display the multi patterns in the same time"
-    //% weight=60 blockGap=2
+    //% weight=55 blockGap=2
     export function LDM_showAll(): void {
         serial.writeString("AT2f=()")
         serial.readUntil("E")
