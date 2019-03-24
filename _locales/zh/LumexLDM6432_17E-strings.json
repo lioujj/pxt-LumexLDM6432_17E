@@ -2,6 +2,10 @@
     "LumexLDM6432_17E|block": "LDM64*32_17E",
     "LumexLDM6432_17E.yesOrNo.yes|block":"是",
     "LumexLDM6432_17E.yesOrNo.no|block":"否",
+    "LumexLDM6432_17E.moveDirection.upward|block":"向上",
+    "LumexLDM6432_17E.moveDirection.downward|block":"向下",
+    "LumexLDM6432_17E.moveDirection.leftward|block":"向左",
+    "LumexLDM6432_17E.moveDirection.rightward|block":"向右",
     "LumexLDM6432_17E.LDM_displayFirmware|block":"在面板上顯示韌體版本",
     "LumexLDM6432_17E.LDM_changeColor|block":"將面板上的顏色，顏色編碼為 %color1| 的顏色換為 %color2", 
     "LumexLDM6432_17E.LDM_changeColorArea|block":"變更區域範圍內的顏色:|範圍左上角X座標: %x|範圍左上角Y座標: %y|範圍寬度:%width|範圍高度:%height|要被置換掉的顏色編碼: %color1|置換後的顏色編碼: %color2",
@@ -12,5 +16,6 @@
     "LumexLDM6432_17E.LDM_saveDisplayed|block":"將全面板的畫面暫存至記憶體",
     "LumexLDM6432_17E.LDM_loadDisplayed|block":"將記憶體內的暫存的畫面顯示在面板上",
     "LumexLDM6432_17E.LDM_loadPattern|block":"從EEPROM讀取自訂圖案|圖案大小:%myPattern|圖案編號: %myID 顯示到 |X座標:%x|Y座標:%y|是否立即顯示: %show",
+    "LumexLDM6432_17E.LDM_movePattern|block":"移動自訂圖案1個像素 %myDir| 圖案大小:%myPattern| 圖案編號: %myID",
     "LumexLDM6432_17E.LDM_showAll|block":"將未顯示的圖案全部顯示"
 }
