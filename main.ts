@@ -113,7 +113,7 @@ namespace LumexLDM6432_17E {
         else
             serial.writeString("AT2b=(1)")
         serial.readUntil("E")
-        basic.pause(1)
+        basic.pause(10)
     }
 
     //% blockId="LDM_loadPattern" block="load user pattern from EEPROM|pattern type:%myPattern|Pattern ID: %myID to |X:%x|Y:%y|display now %show"
@@ -124,7 +124,7 @@ namespace LumexLDM6432_17E {
             myStr = "AT2e=("
         serial.writeString(myStr + x + "," + y + "," + myPattern + "," + myPattern + "," + myID + ")")
         serial.readUntil("E")
-        basic.pause(3)
+        basic.pause(20)
     }
 
     //% blockId="LDM_movePattern" block="move user pattern 1 pixel %myDir|pattern type:%myPattern|Pattern ID: %myID"
