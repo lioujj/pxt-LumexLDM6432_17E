@@ -102,7 +102,7 @@ namespace LumexLDM6432_17E {
     export function LDM_loadDisplayed(): void {
         serial.writeString("AT2d=()")
         serial.readUntil("E")
-        basic.pause(3)
+        basic.pause(20)
     }
 
     //% blockId="LDM_setPatternOverlay" block="set pattern overlay on background: %myAns"
