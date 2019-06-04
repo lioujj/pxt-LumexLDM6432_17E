@@ -140,6 +140,6 @@ namespace LumexLDM6432_17E {
     export function LDM_showAll(): void {
         serial.writeString("AT2f=()")
         serial.readUntil("E")
-        basic.pause(3)
+        basic.pause(20)
     }
 }   
