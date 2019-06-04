@@ -40,7 +40,7 @@ namespace LumexLDM6432_17E {
     export function LDM_displayFirmware(): void {
         serial.writeString("AT20=()")
         serial.readUntil("E")
-        basic.pause(3)
+        basic.pause(20)
     }
 
 
@@ -49,7 +49,7 @@ namespace LumexLDM6432_17E {
     export function LDM_changeColor(color1: number, color2: number): void {
         serial.writeString("ATcc=(" + color1 + "," + color2 + ")")
         serial.readUntil("E")
-        basic.pause(3)
+        basic.pause(20)
     }
 
     //% blockId="LDM_changeColorArea" block="swap displayed color in the area:|x for the top left corner:%x|y for the top left corner:%y|width:%width|height:%height|from color %color1| to color %color2"
@@ -57,7 +57,7 @@ namespace LumexLDM6432_17E {
     export function LDM_changeColorArea(x: number, y: number, width:number, height:number, color1:number, color2:number): void {
         serial.writeString("ATcf=("+x+","+y+","+width+","+height+"," + color1 + "," + color2 + ")")
         serial.readUntil("E")
-        basic.pause(3)
+        basic.pause(20)
     }
 
 
@@ -66,7 +66,7 @@ namespace LumexLDM6432_17E {
     export function LDM_setXYcolor(color: number, x: number, y: number): void {
         serial.writeString("ATee=(" + x + "," + y + "," + color + ")")
         serial.readUntil("E")
-        basic.pause(3)
+        basic.pause(20)
     }
 
 
@@ -75,7 +75,7 @@ namespace LumexLDM6432_17E {
     export function LDM_changeToOneColor(color: number): void {
         serial.writeString("ATc0=(" +color + ")")
         serial.readUntil("E")
-        basic.pause(3)
+        basic.pause(20)
     }
 
     //% blockId="LDM_colorEffect" block="set the color effect(1~9): %colorEffect"
@@ -85,7 +85,7 @@ namespace LumexLDM6432_17E {
         {
             serial.writeString("ATc"+colorEffect+ "=()")
             serial.readUntil("E")
-            basic.pause(3)
+            basic.pause(20)
         }
     }
 
@@ -94,7 +94,7 @@ namespace LumexLDM6432_17E {
     export function LDM_saveDisplayed(): void {
         serial.writeString("AT2c=()")
         serial.readUntil("E")
-        basic.pause(3)
+        basic.pause(20)
     }
 
     //% blockId="LDM_loadDisplayed" block="load and show the whole display contents from RAM"
